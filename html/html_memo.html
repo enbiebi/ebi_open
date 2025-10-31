@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <style>
+        h1  {color: #554ae8d5;}
+        h2  {
+            background-color: rgb(255, 255, 255);
+            color: #343ca0c8;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 160%;
+            padding: 10px;
+        }
+        h3{
+            padding-top:5px;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            
+        }
+        h4{
+            margin-bottom: 0px;
+        }
+        p{
+            margin-top: 0px;
+        }
+        blockquote{
+            background-color: aliceblue;
+            padding: 10px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            border-left:4px solid #343ca0c8;
+        }
+        table, th, td{
+                    border: 1px solid black;
+                }
+    </style>
+
+
+    <title>html_memo</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <h1>自分用HTMLメモ</h1>
+    </head>
+
+    <body style="background-color:rgba(139, 219, 243, 0.514)">
+        <a href="html_memo_2/html_memo2.html" style="font-size: large;">チャプター2</a>
+    <hr>
+    <h2>もくじ</h2>
+    <p>
+        <ul>
+            <li><a href="#html_preview">html previewについて（VSCord拡張機能）</a></li>
+            <li><a href="#a">aタグについて</a></li>
+            <li><a href="#img">imgタグについて</a></li>
+            <li><a href ="#lang">langについて</a></li>
+            <li><a href="#title">the title attribute</a></li>
+            <li><a href="#pre">preタグについて</a></li>
+            <li><a href="#comment">コメントについて</a></li>
+            <li><a href="#hr">hrタグについて</a></li>
+            <li><a href="#formats">HTMLの文字フォーマットについて</a></li>
+            <li><a href="#quort">引用のためのHTML</a></li>
+            <li><a href="#book">ブックマークについて</a></li>
+            <li><a href="#css">CSSについて</a></li>
+            <li><a href="#picture">pictureタグについて</a></li>
+            <li><a href="#favicon">ファビコンについて</a></li>
+            <li><a href="#table">表について</a></li>
+            <li><a href="#list">リストについて</a></li>
+                <ul>
+                    <li><a href="#list_ul">順序なしリスト(ul)について</a></li>
+                    <li><a href="#list_ol">順序付きリスト(ol)について</a></li>
+                    <li><a href="#list_dl/dt/dd">説明リスト(dl/dt/dd)について</a></li>
+                </ul>
+
+        </ul>
+    </p>
+    <hr>
+<h2 id="html_preview">html previewについて（VSCord拡張機能）</h2>
+    <h3>
+        <p>ctrl+shift+v<br>
+    </h3>
+    マウスドラッグで下につけたり横に着けたりできる
+    </p>
+
+    <h2 id="a">aタグについて</h2>
+    <p>
+        <h3><a href="https://hama-shizudaisai.com">hama-shizudaisai</a></h3>
+        <p>
+            <blockquote>
+                ＜a href =”URL”＞ページ名＜/a＞
+            </blockquote>
+            みたいなかんじ<br>
+            hrefは<b>「エイチレフ」</b>と呼ばれる。<br>
+            <a href="links.html"><img src="kirby.png" alt="links.html" width="100"></a>
+            ←実はリンクになっている。画像を突っ込むことも可能
+            <blockquote>
+                &lt;a href="links.html">&lt;img src="hogehoge.png">&lt;a>
+                </blockquote>
+        </p>
+        <hr><h3>target属性</h3>
+        <p>
+            aタグと一緒に使われる属性。<br>
+            <ul>
+                <li><strong>_self</strong>-デフォルト設定。クリックしたのと同じウィンドウ/タブで開く</li>
+                <a href="links.html">links.html_self</a>
+                <li><strong>_blank</strong>-新しいウィンドウ/タブで開く</li>
+                <a href="links.html" target="_blank">links.html_blank</a>
+                <li><strong>_parent</strong>-親フレームで開く(ウィンドウがフレームに分割されていれば、1段だけ分割を解除して、その親フレームに表示します。)</li>
+                <a href="links.html" target="_parent">links.html_parent</a>
+                <li><strong>_top</strong>-ウィンドウの本体全体で開く。(ウィンドウがフレームに分割されていれば、分割をすべて解除して、そこに表示します。)</li>
+                <a href="links.html"target="_top">links.html_top</a>
+            </ul>
+            <blockquote>
+                &lt;a href="links.html" target="_self">links.html_self&lt;/a>
+            </blockquote>
+        </p>
+        <hr><h3>buttonタグ/onclick属性</h3>
+        <p>
+            JavaScriptコードを利用して、ボタンをリンクとして動作させる。
+            <blockquote>
+                &lt;button onclick="document.location='links.html'">ぼたーｎ&lt;/button>
+            </blockquote>
+            <button onclick="document.location='links.html'">ぼたーｎ</button>
+        </p>
+        <hr><h3>mailto属性</h3>
+        <p>
+            メアドをはっつけることも可能<br>
+            <a href="mailto:soreikeebiyarou@gmail.com">カスメアド大公開</a>
+            <blockquote>
+                &lt;a href="mailto:soreikeebiyarou@gmail.com">カスメアド大公開&lt;/a>
+            </blockquote>
+        </p>
+    </p>
+
+    <h2 id="img">imgタグについて</h2>
+    <p>
+        <img src="hama-shizudaisai_logo.png" alt="静大祭のロゴ" width="200" height="200">
+        <blockquote>
+            ＜img src="hama-shizudaisai_logo.png" alt="静大祭のロゴ" width="200" height="200"＞
+        </blockquote>
+        srcは「source」の略。略し方キモ過ぎる<br>
+        ウェブページを埋め込むことも可能
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgOXTI1uOs94Itdtm7VAM5oPODbNZ-zddb1UK0-kcqqXNWL9ZdyZ4H29uY9-xT9pZwqa6S0ycvjdZ8YX6xFIDs9FbImIx59FU6qJtSz5tj0JwQYu4Nl0pumbS3IyIJMlIPh30_uDa9lmfMW_mTiRSxnbyncZqK_0qT8mz5ur3RffyL4J1qhIgZHzfxfQ3At/s660/ai_torikomareta_human.png"
+         alt="AIに取り込まれた人のイラスト" style="width: 200px;height: 200px;">
+         <blockquote>
+            &lt;img src="https://…/s660/ai_torikomareta_human.png"
+         alt="AIに取り込まれた人のイラスト" style="width: 200px;height: 200px;>
+         </blockquote>
+         動くザコシをいれてもよい
+         <img src="zakoshi.gif" alt="ザコシ" style="width: 100px;height: 100px;">
+         <blockquote>
+            &lt;img src="zakoshi.gif" alt="ザコシ" style="width: 100px;height: 100px;">
+         </blockquote>
+         画像サイズ指定で、pxや%ではなくvmを使うと、画面サイズに合わせて拡大/縮小してくれる<br>
+         背景画像：<a href="background_img.html">background_html</a><br>
+         イメージマップについては省略:
+         <a href="https://www.w3schools.com/html/html_images_imagemap.asp">W3schools_HTMLイメージマップ</a><br>
+         <p style="background-color:#ffff99; padding:25px;text-align: center;">
+            <b>注意：</b>大きな画像を入れすぎるとページが重たくなるので気を付けて
+         </p>
+    </p>
+
+    <h2 id="lang">langについて</h2>
+    <p>
+        <h3>＜html lang="ja"＞<br>
+            ＜meta charset="utf-8"＞
+        </h3>
+        「meta charset」はhead中に
+    </p>
+
+    <h2 id="title">the title attribute</h2>
+    <p>
+        <p title="I'm a tooltip">this is a praragraph</p>
+        <h3>＜p title="I'm a tooltip">this is a praragraph＜/p＞</h3>
+        <p>カーソルを上に載せると…？</p>
+    </p>
+
+    <h2 id="pre">preタグについて</h2>
+        <pre>
+    書いたままだしてくれる
+
+そう
+        preタグなら
+
+                    こんなかんじに
+
+        自由自在。
+
+    pre = preserve(保つ)
+
+<small>頻出接頭辞なのによくこれにしようと思いましたね</small>
+            </pre>
+        </p>
+
+        <h2 id="comment">コメントについて</h2>
+        ＜!-- こんな感じで打っていく --＞　正直打ちづらい　改行可
+          <!--
+        改行しても構わない。
+        -->
+                
+                <h2>hrたぐについて</h2>
+                <p>brタグと使い方は同じ<br>
+                    線を引いてくれる<br>
+                    <hr><hr><hr>
+                    ちなみに、<br>
+                    hr = horizon<br>
+                    br = brake</p>
+            
+            <h2 id="formats">HTMLの文字フォーマットについて</h2>
+                <p><b>太字のB</b>や<i>斜体のI</i><br>
+                みたいに、覚えやすいやつもあるけど、ほかにもいろいろある。
+                <p>
+                    <hr><h3>＜strong＞</h3>
+                        <strong>strong</strong><br>
+                        意味は強調。Bと何が違うねんという話だが、<br>
+                        Bはただの太字化<br>
+                        strongは強調<br>
+                        という違いがあるらしい。<br>
+                        HTMLでBを使うくらいなCSSを使った方がいい。
+                        ちなみに、style属性を使ったBは<br>
+                        <blockquote>
+                            　＜p style="font-weight:bold;"＞○○＜/p＞
+                        </blockquote>
+                </p>
+
+                <p>
+                    <hr><h3>＜em＞</h3>
+                        <em>em</em><br>
+                        察せると思うが、B/strongと同じI/emというアレ<br>
+                        emに限って、スクリーンリーダーが読んでくれるらしい。なので強調の意が大きい。<br>
+                        Iは固有名詞とか引用文とか
+                </p>
+
+                <p>
+                    <hr><h3>＜small＞</h3>
+                    <small>small</small><br>
+                    ちっさ
+                </p>
+
+                <p>
+                    <hr><h3>＜mark＞</h3>
+                    <mark>mark</mark><br>
+                    もうそういうことだよ察して
+                </p>
+
+                <p>
+                    <hr><h3>＜del＞</h3>
+                    <del>del</del>
+                </p>
+
+                <p>
+                    <hr><h3>＜ins＞</h3>
+                    <ins>ins</ins><br>
+                    ins = insert
+                </p>
+
+                <p>
+                    <hr><h3>＜sub＞</h3>
+                    O<sub>2</sub><br>
+                    下付き文字 subscript
+                </p>
+
+                <p>
+                    <hr><h3>＜sup＞</h3>
+                2<sup>2</sup><br>
+                上付き文字 superscript
+                </p>
+        </p>
+
+        <hr>
+        <h2 id="quot">引用のためのHTML</h2>
+        <p>
+            引用文をどうこうするために作られたやつ。
+            <p>
+                <h3>blockquote</h3>
+                <blockquote cite="https://www.w3schooli.com/html/html_quotation_elements.asp">
+                    The HTML &lt;blockquote&gt; element defines a section that is quoted from another source.
+
+                        Browsers usually &lt;indent blockquote&gt; elements.
+                </blockquote><br>
+
+                <ins>&lt;blockquote cite="https://www.w3schooli.com/html/html_quotation_elements.asp"&gt;<br>
+                引用文<br>
+                &lt;/blockquote&gt;</ins>
+            </p>
+
+            <p>
+                <hr><h3>q</h3>
+                一文のみの引用に使われる。<br>
+                <q>The HTML &lt;q&gt; tag defines a short quotation.</q><br>
+                <ins>&lt;q&gt;The HTML &lt;q&gt; tag defines a short quotation.&lt;/q&gt;</ins><br>
+                日本語だと、どうやら自動的に鍵括弧が付く模様。CSSでわかりやすくした方が良いとおもう。
+            </p>
+
+            <p>
+                <hr><h3>addr</h3>
+                「HTML」「CSS」「ATM」などの略語を定義する。<br>
+                検索機能や翻訳機能などを助ける。略語の前に置く。
+                <p>
+                    I want to study <addr title="Hyper Text Markup Language">HTML.
+                </p>
+                <ins>I want to study &lt;addr title="Hyper Text Markup Language"&gtHTML.</ins>
+            </p>
+
+            <p>
+                <hr><h3>address</h3>
+                <address>
+                    ebi<br>
+                    hogehoge<br>
+                    addres<br>
+                </address>
+                要素内のテキストは通常斜体で表示され、ブラウザは常に要素の前後に改行を追加します。<br>
+                addressで挟んでいるだけなので省略
+            </p>
+
+            <p>
+                <hr><h3>cite</h3>
+                作品名につけるやつ。人名には付けないでね。
+                <p>
+                    小学校の図書館にあった<cite>星の王子さま</cite>は、読書感想画に使ったが、表紙しか覚えていない。
+                </p>
+                citeで挟んでいるだけなので略
+                </p>
+
+                <p>
+                    <hr><h3>bdo</h3>
+                    何であるのと言いたくなるようなタグ。下のやつは、逆から読める。
+                
+                    <p>
+                        <bdo dir="rtl">This text will be written from right to left</bdo>
+                    </p>
+                    <ins>&lt;bdo dir="rtl"&gt;This text will be written from right to left&lt;/bdo&gt;</ins><br>
+                    ちなみに、ltrは右から左へ書くことができる。<small>アラビア語と回文でしか需要がない。</small><br>
+                    BDO は Bi-Directional Override<br>
+                    ltr は literal の略である。rtlは見たまんま。 
+                </p>
+            </p>
+        <hr>
+        <h2 id="book">ブックマークについて</h2>
+        <p>
+            <ol>
+                <li>id属性を利用してブックマークを作成</li>
+                    <h2 id="C4">Chapter 4</h2>
+                <blockquote>
+                    &lt;h2 id="C4">Chapter 4&lt;/h2>
+                </blockquote>
+                <li>ブックマークのリンクを作成</li>
+                    <a href="#C4">Junp to Chapter4</a>
+                <blockquote>
+                    &lt;a href="#C4">Junp to Chapter4&lt;/a>
+                </blockquote>
+            </ol>
+        </p>
+
+        <h2 id="css">CSSについて</h2>
+            <h3>style属性について</h3>
+                <p>
+                    <strong>＜（任意のタグ） style="（任意のCSSプロパティ）:（任意の値）;"＞</strong><br>
+                    たとえば、このページだと
+                    ＜body style="background-color:aliceblue">＜/body＞がある。<br>
+                    パラグラフの背景カラーを変えることも。
+                    <p style="background-color: powderblue;">パラグラフの背景カラー<br>ie-i</p>
+                    <blockquote>＜p style="background-color: powderblue;">パラグラフの背景カラー＜br＞ie-i＜/p＞</blockquote>
+                    <p style="font-family:courier;">This is a paragraph.</p>
+                    <p style="font-size:160%;">This is a paragraph.</p>
+                    <p style="text-align:center;">Centered paragraph.</p>
+                    <p style="border: 2px solid #763636c8">Hello World</p>
+                    <hr><h3 style="font-size:40px; padding-top:0px; margin-top:0px;" >デカ見出し</h3>
+                    と、いうような感じで、HTMLから個別にあれこれ指定できる。
+                </p>            
+                <hr><h3>styleタグについて</h3>
+                <p>
+                &lt;head&gt;の中に入れる<br>
+                styleタグの中はすべてCSS表記に変更される。<br>
+                このHTMLファイルにも以下のようなものを実装してみた。
+                <blockquote>
+                    <pre>
+&lt;head>
+&lt;meta charset="utf-8">
+    &lt;style>
+        h1  {color: #554ae8d5;}
+        h2  {
+            color: #343ca0c8;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 160%;
+            padding-top: 25px;
+            padding-bottom: 0px;
+        }
+        h3{
+            padding-top:10px;
+            padding-bottom: 0px;
+        }
+        p{
+            margin-top: 0px;
+        }
+    &lt;/style>
+                            </pre>
+                </blockquote>
+                preくん役に立つね
+            </p>
+            
+                <hr><h3>CSS-link</h3>
+                <p>
+                たいていの場合、CSSは別のファイルに作って、リンクを置くことが多い。<br>
+                もちろん、headタグの中に置くことがほとんど。<br>
+                絶対パスでも相対パスでも。
+
+                <blockquote>
+                    <pre>
+&lt;link rel="styleseet" href="hogehoge.css"&gt;
+                    </pre>
+                </blockquote>
+            </p>
+
+            <hr><h3>CSSでリンクカラー変更</h3>
+            <p>
+                <ul>
+                    <li><strong>link</strong>-未訪問のリンク</li>
+                    <li><strong>visited</strong>-訪れたことがあるリンク先</li>
+                    <li><strong>hover</strong>-マウスカーソルをかざしたとき</li>
+                    <li><strong>active</strong>-動作中のリンク</li>
+                </ul>
+            <blockquote>
+                <pre>
+&lt;style>
+    a:link {
+        color: green;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:visited {
+        color: pink;
+        background-color: transparent;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: red;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    
+    a:active {
+        color: yellow;
+        background-color: transparent;
+        text-decoration: underline;
+    }
+    &lt;/style>
+                </pre>
+            </blockquote>
+            <img src="link_picture.png" style="width: 100px;height: 50px;">
+            <a href=LinkButton.html>ボタン再現</a>
+            <blockquote>
+                <pre>
+&lt;style>
+    a:link, a:visited {
+        background-color: #f44336;
+        color: white;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none; 
+        display: inline-block;
+    }
+    
+    a:hover, a:active {
+        background-color: red;
+    }
+    &lt;/style>
+                </pre>
+            </blockquote>
+        </p>
+    <h2 id="picture">pictureタグについて</h2> 
+       <p>
+            条件によって出す画像を変更することができる。<br>
+            <picture>
+                <source media="(min-width:1000px)" srcset="banner01.png">
+                <source media="(min-width:800px)" srcset="kirby.png">
+                <img src="link_picture.png">
+            </picture>
+            <blockquote>
+                <pre>
+&lt;picture>
+    &lt;source media="(min-width:1000px)" srcset="banner01.png">
+    &lt;source media="(min-width:800px)" srcset="kirby.png">
+    &lt;img src="link_picture.png">
+&lt;/picture>
+                </pre>
+
+            </blockquote>
+       </p>
+    <h2 id="favicon">ファビコンについて</h2>
+    <p>
+        ファビコンはタブに表示されるアイコンのこと<br>
+        <img src="favicon_ex.png"><br>
+        次の要素を追加する
+        <blockquote>
+            <pre>
+&lt;html>
+&lt;head>
+  &lt;title>My Page Title&lt;/title>
+  &lt;link rel="icon" type="image/x-icon" href="favicon.png">
+&lt;/head>
+&lt;body>
+
+&lt;h1>This is a Heading&lt;/h1>
+&lt;p>This is a paragraph.&lt;/p>
+
+&lt;/body>
+&lt;/html>
+</pre>
+        </blockquote>
+        <img src="favicon.png">これが入った
+    </p>
+    <h2 id="table">表について</h2>
+    <p>
+        <table>
+            <tr>
+                <th>HTMLタグ</th>
+                <th>効果</th>
+                <th>その他</th>
+            </tr>
+            <tr>
+                <td>table</td>
+                <td>表を用意する</td>
+                <td>表に関連するすべてのタグの親</td>
+            </tr>
+            <tr>
+                <td>th</td>
+                <td>表の一番上の行を示す。</td>
+                <td>table header 票の左から右に埋まる。使うかは任意。</td>
+            </tr>
+            <tr>
+                <td>tr</td>
+                <td>表の行を示す。</td>
+                <td>table row</td>
+            </tr>
+            <tr>
+                <td>td</td>
+                <td>セル一つ一つのデータ</td>
+                <td>table data</td>
+            </tr>
+        </table>
+        <blockquote>
+            <pre>
+&lt;table>
+    &lt;tr>
+        &lt;th>HTMLタグ&lt;/th>
+        &lt;th>効果&lt;/th>
+        &lt;th>その他&lt;/th>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>table&lt;/td>
+        &lt;td>表を用意する&lt;/td>
+        &lt;td>表に関連するすべてのタグの親&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>th&lt;/td>
+        &lt;td>表の一番上の行を示す。&lt;/td>
+        &lt;td>table header 票の左から右に埋まる。使うかは任意。&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>tr&lt;/td>
+        &lt;td>表の行を示す。&lt;/td>
+        &lt;td>table row&lt;/td>
+    &lt;/tr>
+    &lt;tr>
+        &lt;td>td&lt;/td>
+        &lt;td>セル一つ一つのデータ&lt;/td>
+        &lt;td>table data&lt;/td>
+    &lt;/tr>
+&lt;/table>
+            </pre>
+        </blockquote>
+
+        表のヘッダーが横のバージョン
+        <table>
+            <tr>
+              <th>Firstname</th>
+              <td>Jill</td>
+              <td>Eve</td>
+            </tr>
+            <tr>
+              <th>Lastname</th>
+              <td>Smith</td>
+              <td>Jackson</td>
+            </tr>
+            <tr>
+              <th>Age</th>
+              <td>94</td>
+              <td>50</td>
+            </tr>
+          </table>
+          <blockquote>
+            <pre>
+&lt;table&gt;
+  &lt;tr&gt;
+    <strong>&lt;th&gt;Firstname&lt;/th&gt;</strong>
+    &lt;td&gt;Jill&lt;/td&gt;
+    &lt;td&gt;Eve&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    <strong>&lt;th&gt;Lastname&lt;/th&gt;</strong>
+    &lt;td&gt;Smith&lt;/td&gt;
+    &lt;td&gt;Jackson&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    <strong>&lt;th&gt;Age&lt;/th&gt;</strong>
+    &lt;td&gt;94&lt;/td&gt;
+    &lt;td&gt;50&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;
+            </pre>
+          </blockquote>
+          ヘッダーの左詰めも可能
+          <blockquote>
+            th {<br>
+                text-align: left;<br>
+              }<br>
+          </blockquote>
+
+          <hr><h3>複数列のヘッダーー</h3>
+          <p>
+            th（ヘッダー）に<strong>colspan</strong>属性を使用<br>
+            <img src="2header_table.png" style="width: 30vm;"><br>
+            <blockquote>
+                &lt;th colspan="2"&gt;Name&lt;/th&gt;
+            </blockquote>
+          </p>
+
+          <hr><h3>複数行のヘッダー</h3>
+          <p>
+            th（ヘッダー）に<strong>rowspan</strong>属性を使用<br>
+            <img src="rowspan_table.png" style="width:30vm;">
+            <blockquote>
+                ...<br>
+                &lt;tr&gt;<br>
+                &lt;th rowspan="2"&gt;Phone&lt;/th&gt;<br>
+                &lt;td&gt;555-1234&lt;/td&gt;<br>
+              &lt;/tr&gt;<br>
+              ...
+            </blockquote>
+          </p>
+
+          <hr><h3>表タイトルの追加</h3>
+          <p>
+          <blockquote><pre>
+&lt;table style="width:100%"&gt;
+    &lt;caption&gt;Monthly savings&lt;/caption&gt;
+    &lt;tr&gt;......
+          </pre></blockquote>
+          <p style=
+           "background-color:#ffff99;
+            padding:10px;text-align: center;
+            font-size:large;
+            margin-top:10px;">
+            <b>注意：</b>表タイトル&lt;caption&gt;は&lt;title&gt;の直後に置かなければならない<br></p>
+        </p>
+
+        <hr><h3>表の境界線</h3>
+        <p>今はこんな感じ<br>
+            <blockquote>
+                <pre>
+table, th, td{
+    border: 1px solid black;
+}
+            </pre>
+            </blockquote>
+            <a href="https://www.w3schools.com/html/html_table_borders.asp" style="font-size: large;">詳細（W3Schools）</a>
+            <table style="width: 100%">
+                <tr>
+                    <th>CSSプロパティ名</th>
+                    <th>説明</th>
+                    <th>詳細</th>
+                </tr>
+                <tr>
+                    <td>border: 1px solid black;</td>
+                    <td>境界線を追加する</td>
+                    <td>この表みたいな</td>
+                </tr>
+                <tr>
+                    <td>border-collapse: collpase;</td>
+                    <td>表の境界線を1つにする</td>
+                    <td><img src="1border_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>background-color</td>
+                    <td>th, cdの中に入れる tableに入れない</td>
+                    <td><img src="background_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>border-radius: 10px;</td>
+                    <td>境界線が丸く</td>
+                    <td><img src="radius_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>border border-radius の親をth,tdのみにする</td>
+                    <td>th, td{}のみにする。tableを親にしない</td>
+                    <td><img src="avoid_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>border-style</td>
+                    <td>いろいろな境界線に</td>
+                    <td><img src="border_style.png" width="100"></td>
+                </tr>
+                <tr>
+                    <td>border-color</td>
+                    <td>境界線の色が変わる</td>
+                    <td><img src="border_color.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>padding</td>
+                    <td>ふつうのpaddingと変わらん</td>
+                    <td><img src="padding_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>border-spacing</td>
+                    <td>数値を入れることで、セル間隔をあけることができる</td>
+                    <td><img src="border_spacing.png" width="300px"></td>
+                </tr>
+                <tr>
+                    <td>tr:nth-child(even){<br>background-color: #D6EEEE;<br>}</td>
+                    <td>行で交互に色を塗る<br>()内をoddにすると順序が逆に</td>
+                    <td><img src="stripe_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>tr:nth-child(even), th:nth-child(even){<br>background-color: #D6EEEE;<br>}</td>
+                    <td>列で交互に色を塗る！<br>ヘッダーを適用させたくないときはthを除く</td>
+                    <td><img src="column_stripe_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td><pre>
+tr:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+    }
+    
+    th:nth-child(even), td:nth-child(even) {
+    background-color: rgba(150, 212, 212, 0.4);
+    }
+                    </pre></td>
+                    <td>チェック模様<br>最後の0.4(a)は透明度</td>
+                    <td><img src="tiekku_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>
+                        tr {<br>
+                            border-bottom: 1px solid #ddd;<br>
+                          }
+                    </td>
+                    <td>水平区切り線</td>
+                    <td><img src="suiheikugiri_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>tr:hover {background-color: #D6EEEE;}</td>
+                    <td>マウスカーソルを持ってくると、そこに色が付く</td>
+                    <td><img src="hover_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <pre>
+&lt;table&gt;
+  &lt;colgroup&gt;
+    &lt;col span="2" style="background-color: #D6EEEE"&gt;
+  &lt;/colgroup&gt;
+  &lt;tr&gt;
+  ...
+                        </pre>
+                    </td>
+                    <td>最初の二列に色を付ける</td>
+                    <td><img src="start2column_table.png" width="300"></td>
+                </tr>
+                <tr>
+                    <td>  &lt;colgroup&gt;<br>
+                        &lt;col span="5"&gt;<br>
+                        &lt;col span="1" style="background-color: #D6EEEE"&gt;<br>
+                        &lt;col span="1" style="background-color: pink"&gt;<br>
+                      &lt;/colgroup&gt;<br>
+                    </td>
+                    <td>複数列に異なる色を</td>
+                    <td><img src="colgrope_table.png" width="300"></td>
+                </tr>
+            </table>
+        </p>
+        <hr><h3>テーブルサイズ</h3>
+        <p>
+            <img src="table_size_orientation.png" style="width: 100vm;" ><br>
+            body全体にしたいときは、tableに<q>style="width:100%"</q>を追加する。何気に上のテーブルはそのように設定されている。<br>
+            <a href="https://www.w3schools.com/html/html_table_sizes.asp" style="font-size: large;">だるいから省略</a>
+        </p>
+
+    </p>
+    <h2 id="list">リストについて</h2>
+        <h3 id="list_ul">順序なしリストについて</h3>
+        <p>
+        <img src="coffee_tea_milk.png" width="100">
+        <blockquote>
+            &lt;ul&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Coffee&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Tea&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;<br>
+            &lt;/ul&gt;
+        </blockquote>
+        <h4>リスト項目マーカーについて</h4>
+        <p>
+            リストの「・」デザインを変更できる<br>
+            <ul style="list-style-type:disc;">
+                <li>test</li>
+            </ul>
+            <blockquote>
+                &lt;ul&nbsp;style="list-style-type:disc;"&gt;
+            </blockquote>
+            <br>
+
+            <ul style="list-style-type:circle;">
+                <li>test</li>
+            </ul>
+            <blockquote>
+                &lt;ul&nbsp;style="list-style-type:circle;"&gt;
+            </blockquote>
+            <br>
+
+            <ul style="list-style-type:square;">
+                <li>test</li>
+            </ul>
+            <blockquote>
+                &lt;ul&nbsp;style="list-style-type:square;"&gt;
+            </blockquote>
+            <br>
+
+            <ul style="list-style-type:none;">
+                <li>test</li>
+            </ul>
+            <blockquote>
+                &lt;ul&nbsp;style="list-style-type:none;"&gt;
+            </blockquote>
+            <h5>ナビゲーションメニュー</h5>
+            <a href="navi_html" style="font-size: large;">テスト</a>
+            <blockquote>
+                &lt;style&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;ul{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list-style-type:&nbsp;none;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;margin:0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:0;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;overflow:&nbsp;hidden;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#333333;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;li{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;float:&nbsp;left;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;li&nbsp;a{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;display:&nbsp;block;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color:&nbsp;white;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-align:&nbsp;center;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;padding:&nbsp;16px;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text-decoration:&nbsp;none;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                <br>
+                &nbsp;&nbsp;&nbsp;&nbsp;li&nbsp;a:hover{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;background-color:&nbsp;#111111;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                &lt;/style&gt;<br>
+                &lt;/head&gt;<br>
+                &lt;body&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;ul&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a&nbsp;href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;<br>
+                &lt;/body&gt;
+            </blockquote>
+        </p>
+        </p>
+        <hr><h3 id="list_ol">順序付きリストについて</h3>
+        <p>
+        <img src="123coffee_tea_milk.png" width="100">
+        <blockquote>
+            &lt;ol&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Coffee&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Tea&lt;/li&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;Milk&lt;/li&gt;<br>
+            &lt;/ol&gt;
+        </blockquote>
+        <h4>リストの数字について</h4>
+        <p>
+            これも変えられるゾ
+            <ol type="1">
+                <li>test</li>
+            </ol>
+            <blockquote>
+<pre>
+&lt;ol type="1"&gt;
+    &lt;li&gt;test&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+            </blockquote>
+            
+            <ol type="A">
+                <li>test</li>
+            </ol>
+            <blockquote>
+<pre>
+&lt;ol type="A"&gt;
+    &lt;li&gt;test&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+            </blockquote>
+
+            <ol type="a">
+                <li>test</li>
+            </ol>
+            <blockquote>
+<pre>
+&lt;ol type="a"&gt;
+    &lt;li&gt;test&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+            </blockquote>
+
+            <ol type="I">
+                <li>test</li>
+            </ol>
+            <blockquote>
+<pre>
+&lt;ol type="I"&gt;
+    &lt;li&gt;test&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+            </blockquote>
+
+            <ol type="i">
+                <li>test</li>
+            </ol>
+            <blockquote>
+<pre>
+&lt;ol type="i"&gt;
+    &lt;li&gt;test&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+            </blockquote>
+
+        </p>
+        <h4>指定された数からカウント</h4>
+        <p>
+            <ol start="50">
+                <li>test</li>
+            </ol>
+            <blockquote>
+<pre>
+&lt;ol start="50"&gt;
+    &lt;li&gt;test&lt;/li&gt;
+&lt;/ol&gt;
+</pre> 
+            </blockquote>
+        </p>
+        </p>
+
+        <hr><h3 id="list_dl/dt/dd">説明リストについて</h3>
+        <p>
+            <img src="direction_list.png" width="200">
+            <blockquote>
+                &lt;dl&gt;<br>
+                &nbsp;&nbsp;&lt;dt&gt;Coffee&lt;/dt&gt;<br>
+                &nbsp;&nbsp;&lt;dd&gt;- black hot drink&lt;/dd&gt;<br>
+                &nbsp;&nbsp;&lt;dt&gt;Milk&lt;/dt&gt;<br>
+                &nbsp;&nbsp;&lt;dd&gt;- white cold drink&lt;/dd&gt;<br>
+                &lt;/dl&gt;
+            </blockquote>
+        </p>
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+a:link, a:visited {
+    background-color:rgb(101, 193, 191);
+                color:white;
+                padding:25px;
+                margin:10px;
+                text-align:center;
+                text-decoration: none;
+                display:inline-block;
+}
+a:hover, a:active {
+    background-color: rgb(72, 152, 151);
+    color:rgb(213, 228, 240);
+}

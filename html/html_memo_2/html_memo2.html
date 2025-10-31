@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="html_memo2.css">
+    <title>html_memo2</title>
+    <link rel="icon" type="image/x-icon" href="picture/favicon2.png">
+</head>
+<body>
+    <h1>自分用HTMLメモその2</h1>
+    <a href="../html_memo.html">チャプター1にもどる</a><br>
+    <a href="https://www.w3schools.com/html/html_examples.asp">一覧</a>
+        <nav>
+    <div>
+        <h2>もくじ</h2>
+            <hr>
+            <ul>
+                <li><a href="#div">divタグについて</a></li>
+                <li><a href="#class">class属性</a></li>
+                <li><a href="#iframe">iframe構文</a></li>
+                <li><a href="#script">scriptタグ</a></li>
+                <li><a href=#meta>meta要素</a></li>
+                <li><a href=#base>base要素</a></li>
+                <li><a href="#layout">レイアウト(header/footerなど)</a></li>
+                <li><a href="#width">max-widthとvm</a></li>
+                <li><a href="#queri">メディアクエリ</a></li>
+                <li><a href="#semantic">セマンティック要素</a></li>
+                <li><a href="#secart">sectionタグとarticleタグ</a></li>
+                <li><a href="#fig">figure要素とfigcaption要素</a></li>
+                <li><a href="#url">URLってなんなんだー</a></li>
+                <li><a href="form">form要素</a></li>
+                <li><a hred="#video">video audio要素</a></li>
+            </ul>
+        </nav>
+    <section>
+    </div>
+    <div id="div">
+        <h2>divタグについて</h2>
+        <p>CSSがぐっと使いやすくなるやつ。塊で管理</p>
+        <p>例</p>
+        <a href="inline_block.html">inline-block</a>vs.<a href="flex.html">flex</a>vs.<a href="grit.html">grit</a><br>
+        <img src="picture/inline_box.png">
+        </div>
+    </div>
+    <div id="class">
+        <h2>class属性</h2>
+        <p>CSSやJavaScriptをより使いやすくする属性</p>
+        <p>例</p>
+        <a href="class.html">実際のサイト</a><br>
+        <img src="picture/class_test.png">
+        <blockquote>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;style&gt;
+        .country{
+            background-color:aliceblue;
+            color:blueviolet;
+            margin: 20px;
+            padding: 20px;
+        }
+        .city{
+            background-color: aquamarine;
+            color:cadetblue;
+            margin:30px;
+            padding: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="country"&gt;
+        &lt;h2&gt;Japan&lt;/h2&gt;
+        &lt;p&gt;Japan is a country.&lt;br&gt;
+        The land is small,but Many people live in there.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="city"&gt;
+        &lt;h2&gt;Tokyo&lt;/h2&gt;
+        &lt;p&gt;Tokyo is the Biggest city in Japan.&lt;br&gt;
+        There are many buildings, cars, buses, trains, and people.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;                
+            </pre>
+        </blockquote>
+    <hr>
+    <a href="span_class.html">実際のサイト</a><br>
+    <img src="picture/span_class.png">
+    <blockquote>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="ja"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;style&gt;
+        .country{
+            background-color:aliceblue;
+            color:blueviolet;
+            margin: 20px;
+            padding: 20px;
+        }
+        .city{
+            background-color: aquamarine;
+            color:cadetblue;
+            margin:30px;
+            padding: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="country"&gt;
+        &lt;h2&gt;Japan&lt;/h2&gt;
+        &lt;p&gt;Japan is a country.&lt;br&gt;
+        The land is small,but Many people live in there.
+        &lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="city"&gt;
+        &lt;h2&gt;Tokyo&lt;/h2&gt;
+        &lt;p&gt;Tokyo is the Biggest city in Japan.&lt;br&gt;
+        There are many buildings, cars, buses, trains, and people.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        </blockquote>
+    
+    <hr>
+    <p>pタグはヘッダーにも</p>
+    <a href="class_h_p.html">実際のサイト</a><br>
+    <img src="picture/class_h_p.png">
+    <blockquote>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.city {
+    background-color: tomato;
+    color: white;
+    padding: 10px;
+} 
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h2&gt;Different Elements Can Share Same Class&lt;/h2&gt;
+
+&lt;p&gt;Even if the two elements do not have the same tag name,
+ they can both point to the same class, and get the same CSS styling:&lt;/p&gt;
+
+&lt;h2 class="city"&gt;Paris&lt;/h2&gt;
+&lt;p class="city"&gt;Paris is the capital of France.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+        </pre>
+        </blockquote>
+        <p style="font-size: 120%; text-decoration: underline;">実は、idを使うこともできる。idは1回きり。</p>
+    </div>  
+    <div id="iframe">
+        <h2>iframe構文</h2>
+        <p>サイトの中にサイトを入れられる！はよ教えろやボケ</p>
+        <blockquote>
+            &lt;iframe src="../html_memo.html" style="width: 80%; height:500px" title="html_memo"&gt;&lt;/iframe&gt;
+        </blockquote>
+        <iframe src="../html_memo.html" style="width: 80%; height:500px;margin-left: 10%;" title="html_memo"></iframe>
+        <p>何気にCSSのborderが使えるらしい。使うか？</p>
+    </div>
+    <div id="script">
+        <h2>scriptタグ</h2>
+        <p>cssのstyleと同じノリで、javascriptもscriptタグを使用して動作させることが可能。</p>
+        <iframe src="script.html" style="height:300px"></iframe>
+        <blockquote>
+            <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;style&gt;
+            body{
+                background-color: white;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First JavaScript&lt;/h1&gt;
+
+&lt;p&gt;JavaScript can change the content of an HTML element:&lt;/p&gt;
+
+&lt;button type="button" onclick="myFunction()"&gt;Click Me!&lt;/button&gt;
+
+&lt;p id="demo"&gt;This is a demonstration.&lt;/p&gt;
+
+&lt;script&gt;
+function myFunction() { 
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            </blockquote>
+            <p class="attention">何らかの事情でJavaScriptがうまく動作しない場合、noscriptタグで挟んだものが出てくる。</p>
+    </div>
+    <div id="meta">
+        <h2>meta要素について</h2>
+        <p>文字コードの指定のほかにも、いろいろなことができる</p>
+        <p>検索エンジンのキーワード
+            <blockquote>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;</blockquote>
+        </p>
+        <p>ページの作成者を定義
+            <blockquote>&lt;meta name="author" content="John Doe"&gt;</blockquote>
+        </p>
+        <p>30秒ごとに更新
+            <blockquote>&lt;meta http-equiv="refresh" content="30"&gt;</blockquote>
+        </p>
+        <p>ビューポートを設定して、すべてのデバイスでWebサイトが適切に表示されるようにする
+            <blockquote>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</blockquote>
+            <small>initial-scale=1.0:ブラウザーによってページが最初に読み込まれるときの初期ズームレベルを設定</small>
+        <p class="attention">ビューポートの設定は必須</p>
+        </p>
+    </div>
+    <div id="base">
+        <h2>base要素</h2>
+        <p>相対パスの基準URLを指定する。</p>
+        <p>
+            <dl>target属性
+                <dt>_blank</dt>
+                <dd>新しいウィンドウで表示</dd>
+                <dt>_self</dt>
+                <dd>同じページ内で表示</dd>
+            </dl>
+            <iframe src="base.html"></iframe>
+            <blockquote>
+                <pre>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" 
+    content="width=device-width,initial-scale=1.0"&gt;
+    &lt;base href="../html_memo.html" target="_blank"&gt;
+    ・・・
+&lt;/head&gt;
+&lt;body&gt;
+    base url - &lt;a href="html_memo.html"&gt;html_memo&lt;/a&gt;
+    &lt;img src="favicon.png" style="width:30%"&gt;
+&lt;/body&gt;
+                </pre>
+                </blockquote>                
+        </p>
+    </div>
+    <div id="layout">
+        <h2>レイアウト</h2>
+        <p>
+            <img src="picture/layout.png"><br>
+            <a href="layout.html">実際のURL</a>
+            <iframe src="layout.html"></iframe>
+            <blockquote>
+                <pre>
+&lt;style&gt;
+    header{
+        background-color: #666;
+        padding:30px;
+        text-align: center;
+        font-size: 35px;
+        color:white;
+    }
+    nav{
+        float:left;
+        width:30%;
+        height: 300px;
+        background: #ccc;
+        padding:20px;
+    }
+    nav ul{
+        list-style-type: none;
+        padding: 0;
+    }
+    article{
+        float:left;
+        padding: 20px;
+        width: 70%;
+        background-color: #f1f1f1;
+    }
+    section::after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    footer{
+        background-color: #777;
+        padding: 10px;
+        text-align: center;
+        color: white;
+    }
+    @media (max-width:600px){
+        nav,article{
+            width: 100%;
+            height: auto;
+        }
+    }
+&lt;/style&gt;
+
+…
+
+&lt;body&gt;
+    &lt;header&gt;header&lt;/header&gt;
+    &lt;section&gt;
+        &lt;nav&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#"&gt;london&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;london2&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href="#"&gt;london3&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+        &lt;article&gt;
+            &lt;h1&gt;London&lt;/h1&gt;
+            &lt;p&gt;London is athe capital city of England. 
+                It is the most populous city in the United Kingdom, 
+                with a metropolitan area of over 13 million inhabitants.&lt;/p&gt;
+            &lt;p&gt;Standong on the river thames, 
+            Londo has been a major settlement for two millennia, 
+            its history goin back to its founding by the Romans, 
+            who named it Londinium.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/section&gt;
+    &lt;footer&gt;
+        &lt;p&gt;footer&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+                </pre>
+            </blockquote>
+        </p>
+    </div>
+    <div id="width">
+        <h2>max-widthとvm</h2>
+        <h3>mac-width</h3>
+        <p>
+            <ul>
+                <li>width: 100%; - 画面幅いっぱいに表示。幅に合わせて画像が拡大縮小される。</li>
+                <img src="../favicon.png" style="width:100%; height:auto;">
+                <li>max-width: 100%; - (画面の大きさ)＜(画像の大きさ)なら縮小。でなければ、元の画像サイズで表示させる。</li>
+                <img src="../favicon.png" style="max-width:100%; height:auto;">
+            </ul>
+                <p class="attention">heightはautoにしておこう</p>
+        </p>
+        <h3>vm</h3>
+        <p>ビューポートの幅を意味する。<br>
+            <h4 style="font-size:10vw;margin-left: 10%;">Hello World</h4>
+            <blockquote>h4 style="font-size:10vw"</blockquote>
+            <p class="attention">1vw = ビューポートの幅の1%<br>ビューポートの幅が50cmの場合、1vwは0.5cm</p>
+        </p>
+    </div>
+    <div id="queri">
+        <h2>メディアクエリ</h2>
+        <p>
+            大きな画面では左、中央、右に並べるけど、小さな画面では縦に積み重ねるなど、コンテンツの場所をウィンドウサイズごとにいい感じにできる<br>
+            <a href="queri.html">実際のサイト</a>
+            <blockquote>
+                <pre>
+
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+        width: 100%;
+    }
+}
+                </pre>
+            </blockquote>
+        </p>
+    </div>
+    <div id="semantic">
+        <h2>セマンティック要素</h2>
+        <p>
+            ChatGPT<br>
+            <q>その要素の名前自体が内容の意味を明確に示すタグのことです。<br>
+                つまり、何のためのコンテンツかをHTMLだけで理解できるようにするタグです。</q><br>
+            <img src="picture/semantic.png" style="float: left;">
+            <img src="picture/non_semantic.png" style="float :left;"><br>
+            つかれた　おかしくなてる
+        </p>
+    </div>
+    <article>
+        <div id="secart">
+            <h2>sectionタグとarticleタグ</h2>
+            <p>
+                前述したように、divタグは非セマンティックタグ。<br>
+                もっとわかりやすくするために<br>
+                sectionタグ内にarticleタグを入れて使おう。
+            </p>
+        </div>
+    </article>
+    <article id="fig">
+        <div>
+        <h2>figure要素とfigcaption要素</h2>
+        <p>
+            図入れるときに使う。はあ…
+            <a href="fig.html">りんく</a><br>
+            <iframe src="fig.html"></iframe>
+            <blockquote>
+            <pre>
+&lt;figure&gt;
+    &lt;img src="pic_trulli.jpg" alt="Trulli"&gt;
+    &lt;figcaption&gt;Fig1. - Trulli, Puglia, Italy.&lt;/figcaption&gt;
+&lt;/figure&gt;
+            </pre>
+            </blockquote>                
+        </p>
+    </div>
+    </article>
+    <article id="url">
+        <div>
+            <h2>URL</h2>
+            <p>
+                URL=Uniform Resource Locator
+                <p>
+                    <blockquote><code>scheme://prefix.domain:port/path/filename</code></blockquote></p>
+
+                <ul>
+                    <li><strong>scheme（スキーム）</strong>：インターネットサービスの種類を定義します（一般的なのは <code>http</code> や <code>https</code>）。</li>
+                    <li><strong>prefix（プレフィックス）</strong>：ドメインの接頭辞を定義します（<code>http</code> の場合、通常は <code>www</code>）。</li>
+                    <li><strong>domain（ドメイン）</strong>：インターネット上のドメイン名を定義します（例：<code>w3schools.com</code>）。</li>
+                    <li><strong>port（ポート）</strong>：ホスト上のポート番号を定義します（<code>http</code> のデフォルトはポート <code>80</code>）。</li>
+                    <li><strong>path（パス）</strong>：サーバー上のパスを定義します（省略された場合はサイトのルートディレクトリを指します）。</li>
+                    <li><strong>filename（ファイル名）</strong>：ドキュメントやリソースの名前を定義します。</li>
+                </ul>
+                <table>
+                <caption>スキームの種類と用途</caption>
+                    <thead>
+                    <tr>
+                        <th>スキーム（Scheme）</th>
+                        <th>略語</th>
+                        <th>用途</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>http</td>
+                        <td>HyperText Transfer Protocol</td>
+                        <td>一般的なウェブページに使用。暗号化されていない</td>
+                    </tr>
+                    <tr>
+                        <td>https</td>
+                        <td>Secure HyperText Transfer Protocol</td>
+                        <td>安全なウェブページに使用。暗号化されている</td>
+                    </tr>
+                    <tr>
+                        <td>ftp</td>
+                        <td>File Transfer Protocol</td>
+                        <td>ファイルのダウンロードやアップロードに使用</td>
+                    </tr>
+                    <tr>
+                        <td>file</td>
+                        <td>―</td>
+                        <td>自分のコンピューター上のファイルにアクセスするために使用</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </p>
+        </div>
+    </article>
+    <article id="form">
+        <div>
+            <h2>form要素</h2>
+            <p><a href="https://www.w3schools.com/html/html_form_input_types.asp">もういやだ</a>
+                いろいろできる<br>
+                <h3>imputタイプ</h3>
+                <form>
+                    <label for="fname">さあいこう</label><br>
+                    <input type="text" id="fname" name="fname"><br>
+                    <label for="lname">ジョージと一緒に</label><br>
+                    <input type="text" id="lname" name="lname" value="しゅっぱーつ！"><br>
+                </form>
+                <blockquote>
+                    <pre>
+&lt;form&gt; 
+    &lt;label for="fname"&gt;さあいこう&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;
+    &lt;label for="lname"&gt;ジョージと一緒に&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="lname" name="lname" value="しゅっぱーつ！"&gt;&lt;br&gt;
+&lt;/form&gt;
+                    </pre>
+                    </blockquote>
+                しゅっぱーつ！
+            <div>
+                <h4>パスワードフィールド</h4>
+                typeをpasswordにすると、入力された文字が見えなくなる
+                <form>
+                    <label for="pwd">Password:</label><br>
+                    <input type="password" id="pwd" name="pwd">
+                </form>
+                <blockquote>
+                    <pre>
+&lt;label for=&quot;pwd&quot;&gt;Password:&lt;/label&gt;&lt;br&gt;
+&lt;input type=&quot;password&quot; id=&quot;pwd&quot; name=&quot;pwd&quot;&gt;
+                    </pre>
+                    </blockquote>            
+                </div>
+                <h3>ラジオボタン</h3>
+                <form>
+                    <input type="radio" id="知らないこと" name="送信時のデータ名">
+                    <label for="知らないこと">知らないこと</label><br>
+                    <input type="radio" id="many" name="takusan">
+                    <label for="たくさんあるよね">たくさんあるよね</label>
+                </form>
+                <blockquote>
+                    <pre>
+&lt;form&gt;
+    &lt;input type="radio" id="知らないこと" name="送信時のデータ名"&gt;
+    &lt;label for="知らないこと"&gt;知らないこと&lt;/label&gt;&lt;br&gt;
+    &lt;input type="radio" id="many" name="takusan"&gt;
+    &lt;label for="たくさんあるよね"&gt;たくさんあるよね&lt;/label&gt;
+&lt;/form&gt;
+                    </pre>
+                    </blockquote>
+                    <h3>チェックボックス</h3>
+                    <form>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> I have a bike</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> I have a car</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> I have a boat</label>
+                      </form>
+                      <blockquote>
+                        <pre>
+&lt;form&gt;
+    &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&gt;
+    &lt;label for="vehicle1"&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"&gt;
+    &lt;label for="vehicle2"&gt; I have a car&lt;/label&gt;&lt;br&gt;
+    &lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&gt;
+    &lt;label for="vehicle3"&gt; I have a boat&lt;/label&gt;
+&lt;/form&gt;
+                        </pre>
+                      </blockquote>       
+                      <h3>送信ボタン</h3>
+                      input type="submit"で
+                      <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input type="submit">
+                      </form>
+                      <blockquote>
+                        <pre>
+&lt;form action="/action_page.php"&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;
+  &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit"&gt;
+&lt;/form&gt;
+                        </pre>
+                      </blockquote>
+                      <h3>リセット</h3>
+                      input type="reset" value="Reset"で
+                      <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                      </form>
+                      <p class="attention">input内にname属性がないと、データが送信されなくなる<br>
+                    imputにはtype id nameの3つが必須だと考えてよい</p>
+                    <p class="attention">labelで決めたforはidと等しくあるべき</p>
+                      より実践的な内容は<a href="https://www.w3schools.com/html/html_forms_attributes.asp">こちら</a>
+                      <h3>ドロップダウンリスト</h3>
+                      <label for="cars">Choose a car:</label>
+                      <select id="cars" name="cars">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="fiat">Fiat</option>
+                        <option value="audi">Audi</option>
+                      </select>
+                      <blockquote>
+                        <pre>
+&lt;label for="cars"&gt;Choose a car:&lt;/label&gt;
+&lt;select id="cars" name="cars"&gt;
+    &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+    &lt;option value="saab"&gt;Saab&lt;/option&gt;
+    &lt;option value="fiat"&gt;Fiat&lt;/option&gt;
+    &lt;option value="audi"&gt;Audi&lt;/option&gt;
+&lt;/select&gt;
+                        </pre>
+                        </blockquote>
+                        <p class="attention">select内にsize="3"などと入れると、
+                            枠内に3つ値が表示されるようになる。multipleで複数選択可能に（ctrlおしっぱで）</p>
+                        <p class="attention">
+                            &lt;option value=&quot;fiat&quot; selected&gt;Fiat&lt;/option&gt;&lt;/p&gt;<br>
+                            のように、selectedを入れると、ドロップダウンリストで事前選択される。なしだと一番上になる。</p>
+                        <h3>日付時間入力</h3>
+                        <form>
+                            <label for="birthday">Birthday:</label>
+                            <input type="date" id="birthday" name="birthday"><br>
+                            <label for="birthdaytime">Birthday (date and time):</label>
+                            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                          </form>
+                          <blockquote>
+                            <pre>
+&lt;form&gt;
+    &lt;label for=&quot;birthday&quot;&gt;Birthday:&lt;/label&gt;
+    &lt;input type=&quot;date&quot; id=&quot;birthday&quot; name=&quot;birthday&quot;&gt;&lt;br&gt;
+    &lt;label for=&quot;birthdaytime&quot;&gt;Birthday (date and time):&lt;/label&gt; 
+    &lt;input type=&quot;datetime-local&quot; id=&quot;birthdaytime&quot; name=&quot;birthdaytime&quot;&gt;
+&lt;/form&gt;
+                            </pre>
+                            </blockquote>
+                            
+                            <h3>textarea要素</h3>
+                        <textarea name="message" rows="10" cols="30">ここにもじが</textarea>
+                        <blockquote>
+                        &lt;textarea name="message" rows="10" cols="30"&gt;ここにもじが&lt;/textarea&gt;
+                    </blockquote>
+                    <h3>button要素</h3>
+                    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+                    <blockquote>
+                &lt;button type="button" onclick="alert('Hello World!')"&gt;Click Me!&lt;/button&gt;
+                    </blockquote>
+                    <h3>fieldsetとlegend</h3>
+                    <form action="/action_page.php">
+                        <fieldset>
+                          <legend>Personalia:</legend>
+                          <label for="fname">First name:</label><br>
+                          <input type="text" id="fname" name="fname" value="John"><br>
+                          <label for="lname">Last name:</label><br>
+                          <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                          <input type="submit" value="Submit">
+                        </fieldset>
+                      </form>
+                      <blockquote>
+                        <pre>
+&lt;form action=&quot;/action_page.php&quot;&gt;
+    &lt;fieldset&gt;
+    &lt;legend&gt;Personalia:&lt;/legend&gt;
+    &lt;label for=&quot;fname&quot;&gt;First name:&lt;/label&gt;&lt;br&gt;
+    &lt;input type=&quot;text&quot; id=&quot;fname&quot; name=&quot;fname&quot; value=&quot;John&quot;&gt;&lt;br&gt;
+    &lt;label for=&quot;lname&quot;&gt;Last name:&lt;/label&gt;&lt;br&gt;
+    &lt;input type=&quot;text&quot; id=&quot;lname&quot; name=&quot;lname&quot; value=&quot;Doe&quot;&gt;&lt;br&gt;&lt;br&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;Submit&quot;&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
+                        </pre>
+                        </blockquote>
+                    </p>
+        </div>
+    </article>
+    <article id="video">
+        <div>
+            <h2>video audio</h2>
+        <blockquote>
+            <pre>
+&lt;video width=&quot;320&quot; height=&quot;240&quot; controls&gt;
+    &lt;source src=&quot;movie.mp4&quot; type=&quot;video/mp4&quot;&gt;
+    &lt;source src=&quot;movie.ogg&quot; type=&quot;video/ogg&quot;&gt;
+Your browser does not support the video tag.
+&lt;/video&gt;
+
+
+
+&lt;audio controls&gt;
+  &lt;source src=&quot;horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+  &lt;source src=&quot;horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+Your browser does not support the audio element.
+&lt;/audio&gt;
+            </pre>
+            </blockquote>            
+        </div>
+        </article>
+</section>
+</body>
+</html>
